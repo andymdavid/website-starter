@@ -48,16 +48,17 @@ export const siteContent: SiteContent = {
     {
       key: "navbar",
       enabled: true,
-      id: "navbar",
       props: {
-        logo: "Landing Template Starter",
         links: [
           { label: "Features", href: "#benefits" },
           { label: "How It Works", href: "#howItWorks" },
           { label: "Pricing", href: "#pricing" },
           { label: "FAQ", href: "#faq" },
         ],
-        ctaLabel: "Get Started",
+        cta: {
+          label: "Get Started",
+          href: "#pricing",
+        },
       },
     },
     {
