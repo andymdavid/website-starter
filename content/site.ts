@@ -165,22 +165,30 @@ export const siteContent: SiteContent = {
           {
             title: "Edit Content",
             description:
-              "Update the content file with your copy, structure, and configuration.",
-            icon: "Edit",
+              "Update the content file with your copy, structure, and configuration. All changes are version controlled.",
+            icon: "FileEdit",
+            bullets: [
+              "No code changes required",
+              "Edit copy and structure",
+              "Preview changes instantly",
+            ],
           },
           {
             title: "Customize Theme",
             description:
-              "Adjust colors, fonts, and spacing to match your brand.",
+              "Adjust colors, fonts, and spacing to match your brand identity perfectly.",
             icon: "Palette",
+            bullets: ["Choose your colors", "Select typography", "Set spacing values"],
           },
           {
-            title: "Deploy",
+            title: "Deploy & Ship",
             description:
-              "Push to production with zero configuration. Works with any host.",
+              "Push to production with zero configuration. Works with Vercel, Netlify, and any modern host.",
             icon: "Rocket",
+            bullets: ["One-click deployment", "Automatic optimization", "Global CDN"],
           },
         ],
+        note: "No credit card required. Start building in under 5 minutes.",
       },
     },
     {
