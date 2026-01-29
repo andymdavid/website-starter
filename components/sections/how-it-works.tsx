@@ -15,25 +15,12 @@ interface HowItWorksProps {
   note?: string;
 }
 
-export function HowItWorks({ title, subtitle, steps }: HowItWorksProps) {
+export function HowItWorks({ title, steps }: HowItWorksProps) {
   return (
     <Section variant="muted">
       <Container>
-        <div className="space-y-8">
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl font-bold">{title}</h2>
-            {subtitle && <p className="text-muted-foreground">{subtitle}</p>}
-          </div>
-          <div className="grid gap-4 sm:grid-cols-3">
-            {steps.map((step, index) => (
-              <div key={index} className="p-4 border rounded-lg">
-                <span className="text-sm text-muted-foreground">Step {index + 1}</span>
-                <h3 className="font-semibold">{step.title}</h3>
-                <p className="text-sm text-muted-foreground">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        <h2 className="text-2xl font-bold text-center">{title}</h2>
+        <p className="text-center text-sm text-muted-foreground">{steps.length} steps</p>
       </Container>
     </Section>
   );

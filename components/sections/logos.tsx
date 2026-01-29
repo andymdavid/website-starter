@@ -17,16 +17,8 @@ export function Logos({ title, logos }: LogosProps) {
   return (
     <Section variant="muted">
       <Container>
-        <div className="text-center space-y-4">
-          <p className="text-sm text-muted-foreground">{title}</p>
-          <div className="flex flex-wrap justify-center gap-8">
-            {logos.map((logo, index) => (
-              <span key={index} className="text-muted-foreground">
-                {logo.name}
-              </span>
-            ))}
-          </div>
-        </div>
+        <p className="text-center text-sm text-muted-foreground">{title}</p>
+        <p className="text-center text-xs text-muted-foreground">{logos.length} logos</p>
       </Container>
     </Section>
   );

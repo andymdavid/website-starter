@@ -22,14 +22,11 @@ interface FooterProps {
   social?: SocialLink[];
 }
 
-export function Footer({ logo, tagline }: FooterProps) {
+export function Footer({ logo }: FooterProps) {
   return (
     <footer className="border-t py-8">
       <Container>
-        <div className="text-center space-y-2">
-          <p className="font-semibold">{logo}</p>
-          {tagline && <p className="text-sm text-muted-foreground">{tagline}</p>}
-        </div>
+        <p className="text-center text-sm">{logo}</p>
       </Container>
     </footer>
   );
