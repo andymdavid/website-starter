@@ -3,27 +3,22 @@ import { Container } from "@/components/layout/container";
 
 interface FinalCtaProps {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   ctaPrimary: string;
-  ctaSecondary: string;
+  ctaSecondary?: string;
 }
 
-export function FinalCta({
-  title,
-  subtitle,
-  ctaPrimary,
-  ctaSecondary,
-}: FinalCtaProps) {
+export function FinalCta({ title, subtitle, ctaPrimary, ctaSecondary }: FinalCtaProps) {
   return (
     <Section variant="muted">
       <Container>
         <div className="text-center space-y-4">
-          <h2 className="text-2xl font-bold">Final CTA (stub)</h2>
-          <p className="text-muted-foreground">Title: {title}</p>
-          <p className="text-muted-foreground">Subtitle: {subtitle}</p>
-          <p className="text-sm text-muted-foreground">
-            CTAs: {ctaPrimary} / {ctaSecondary}
-          </p>
+          <h2 className="text-3xl font-bold">{title}</h2>
+          {subtitle && <p className="text-muted-foreground">{subtitle}</p>}
+          <div className="flex justify-center gap-4">
+            <span className="text-sm">[{ctaPrimary}]</span>
+            {ctaSecondary && <span className="text-sm text-muted-foreground">[{ctaSecondary}]</span>}
+          </div>
         </div>
       </Container>
     </Section>

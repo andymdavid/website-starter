@@ -1,28 +1,34 @@
 import { Container } from "@/components/layout/container";
 
-interface FooterProps {
-  logo: string;
-  tagline: string;
-  links: Array<{
-    title: string;
-    items: Array<{ label: string; href: string }>;
-  }>;
-  social: Array<{ platform: string; href: string }>;
+interface FooterLink {
+  label: string;
+  href: string;
 }
 
-export function Footer({ logo, tagline, links, social }: FooterProps) {
+interface FooterLinkGroup {
+  title: string;
+  items: FooterLink[];
+}
+
+interface SocialLink {
+  platform: string;
+  href: string;
+}
+
+interface FooterProps {
+  logo: string;
+  tagline?: string;
+  links?: FooterLinkGroup[];
+  social?: SocialLink[];
+}
+
+export function Footer({ logo, tagline }: FooterProps) {
   return (
-    <footer className="border-t">
+    <footer className="border-t py-8">
       <Container>
-        <div className="py-8">
-          <div className="text-center space-y-4">
-            <div className="font-semibold">{logo}</div>
-            <p className="text-sm text-muted-foreground">{tagline}</p>
-            <p className="text-xs text-muted-foreground">
-              Footer (stub) - {links.length} link groups, {social.length} social
-              links
-            </p>
-          </div>
+        <div className="text-center space-y-2">
+          <p className="font-semibold">{logo}</p>
+          {tagline && <p className="text-sm text-muted-foreground">{tagline}</p>}
         </div>
       </Container>
     </footer>

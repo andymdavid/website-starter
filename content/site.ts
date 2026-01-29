@@ -15,9 +15,9 @@ export type SectionKey =
 export interface SectionConfig {
   key: SectionKey;
   enabled: boolean;
-  id?: string; // For anchor links
-  variant?: string; // e.g. "A" | "B" - specific to each section
-  props: Record<string, any>; // Section-specific data
+  id?: string;
+  variant?: string;
+  props: Record<string, any>;
 }
 
 // Site metadata
@@ -36,13 +36,12 @@ export interface SiteContent {
 // Single source of truth for site content
 export const siteContent: SiteContent = {
   site: {
-    name: "Landing Template Starter",
-    tagline: "Build high-converting landing pages with ease",
+    name: "Your Brand",
+    tagline: "Your tagline here",
   },
   page: {
-    title: "Landing Template Starter",
-    description:
-      "A Next.js landing page template with Tailwind CSS, shadcn/ui, and more",
+    title: "Your Brand",
+    description: "Your page description for SEO",
   },
   sections: [
     {
@@ -55,25 +54,20 @@ export const siteContent: SiteContent = {
           { label: "Pricing", href: "#pricing" },
           { label: "FAQ", href: "#faq" },
         ],
-        cta: {
-          label: "Get Started",
-          href: "#pricing",
-        },
+        cta: { label: "Get Started", href: "#pricing" },
       },
     },
     {
       key: "hero",
       enabled: true,
       id: "hero",
-      variant: "default",
       props: {
-        badge: "🚀 New: AI-powered content generation",
-        title: "Build Landing Pages That Convert",
-        subtitle:
-          "A content-driven template system for creating high-converting SaaS landing pages. Edit content, not code.",
+        badge: "New: Something exciting",
+        title: "Your Main Headline Here",
+        subtitle: "A compelling subheadline that explains your value proposition in one or two sentences.",
         ctaPrimary: { label: "Get Started", href: "#pricing" },
-        ctaSecondary: { label: "View Demo", href: "#benefits" },
-        socialProof: "Trusted by 500+ developers and teams worldwide",
+        ctaSecondary: { label: "Learn More", href: "#benefits" },
+        socialProof: "Trusted by X+ customers",
       },
     },
     {
@@ -81,15 +75,13 @@ export const siteContent: SiteContent = {
       enabled: true,
       id: "logos",
       props: {
-        title: "Trusted by teams at leading companies",
-        subtitle: "Join thousands of developers building better products",
+        title: "Trusted by leading companies",
         logos: [
-          { name: "Acme Corp", href: "https://example.com" },
-          { name: "TechStart Inc" },
-          { name: "BuildFast", href: "https://example.com" },
-          { name: "DevTools Co" },
-          { name: "CloudScale", href: "https://example.com" },
-          { name: "DataFlow" },
+          { name: "Company 1" },
+          { name: "Company 2" },
+          { name: "Company 3" },
+          { name: "Company 4" },
+          { name: "Company 5" },
         ],
       },
     },
@@ -97,55 +89,13 @@ export const siteContent: SiteContent = {
       key: "benefits",
       enabled: true,
       id: "benefits",
-      variant: "bento",
       props: {
-        title: "Everything you need to succeed",
-        subtitle: "Powerful features designed to help you convert more visitors",
+        title: "Why choose us",
+        subtitle: "Everything you need to succeed",
         items: [
-          {
-            title: "Content-Driven Architecture",
-            description:
-              "Edit copy and structure without touching code. Perfect for rapid iteration and testing.",
-            icon: "FileText",
-            highlight: true,
-            bullets: [
-              "No JSX changes needed",
-              "Agent-friendly format",
-              "Version controlled content",
-            ],
-          },
-          {
-            title: "Responsive Design",
-            description:
-              "Beautiful on every device with mobile-first approach ensuring great UX everywhere.",
-            icon: "Smartphone",
-          },
-          {
-            title: "Type-Safe Development",
-            description:
-              "Full TypeScript support means fewer bugs, better autocomplete, and improved developer experience.",
-            icon: "Shield",
-            bullets: ["Compile-time checks", "Better IDE support", "Fewer runtime errors"],
-          },
-          {
-            title: "Performance Optimized",
-            description:
-              "Built on Next.js 15 with App Router for optimal loading speed and SEO.",
-            icon: "Zap",
-          },
-          {
-            title: "Production Ready",
-            description:
-              "Deploy with confidence using battle-tested components and best practices.",
-            icon: "CheckCircle",
-            bullets: ["Zero config deployment", "SEO optimized", "Accessibility built-in"],
-          },
-          {
-            title: "Easy to Customize",
-            description:
-              "Tailwind CSS and shadcn/ui make it simple to match your brand perfectly.",
-            icon: "Palette",
-          },
+          { title: "Benefit 1", description: "Description of benefit 1" },
+          { title: "Benefit 2", description: "Description of benefit 2" },
+          { title: "Benefit 3", description: "Description of benefit 3" },
         ],
       },
     },
@@ -154,36 +104,13 @@ export const siteContent: SiteContent = {
       enabled: true,
       id: "howItWorks",
       props: {
-        title: "Get started in minutes",
-        subtitle: "Three simple steps to launch your landing page",
+        title: "How it works",
+        subtitle: "Get started in three simple steps",
         steps: [
-          {
-            title: "Edit Content",
-            description:
-              "Update the content file with your copy, structure, and configuration. All changes are version controlled.",
-            icon: "FileEdit",
-            bullets: [
-              "No code changes required",
-              "Edit copy and structure",
-              "Preview changes instantly",
-            ],
-          },
-          {
-            title: "Customize Theme",
-            description:
-              "Adjust colors, fonts, and spacing to match your brand identity perfectly.",
-            icon: "Palette",
-            bullets: ["Choose your colors", "Select typography", "Set spacing values"],
-          },
-          {
-            title: "Deploy & Ship",
-            description:
-              "Push to production with zero configuration. Works with Vercel, Netlify, and any modern host.",
-            icon: "Rocket",
-            bullets: ["One-click deployment", "Automatic optimization", "Global CDN"],
-          },
+          { title: "Step 1", description: "Description of step 1" },
+          { title: "Step 2", description: "Description of step 2" },
+          { title: "Step 3", description: "Description of step 3" },
         ],
-        note: "No credit card required. Start building in under 5 minutes.",
       },
     },
     {
@@ -191,53 +118,12 @@ export const siteContent: SiteContent = {
       enabled: true,
       id: "pricing",
       props: {
-        title: "Simple, transparent pricing",
-        subtitle: "Choose the plan that fits your needs",
+        title: "Simple pricing",
+        subtitle: "Choose the plan that works for you",
         plans: [
-          {
-            name: "Starter",
-            price: "$29",
-            period: "/month",
-            description: "Perfect for small projects",
-            features: [
-              "Up to 3 landing pages",
-              "Basic analytics",
-              "Email support",
-              "Standard templates",
-            ],
-            cta: "Get Started",
-            highlighted: false,
-          },
-          {
-            name: "Professional",
-            price: "$79",
-            period: "/month",
-            description: "For growing businesses",
-            features: [
-              "Unlimited landing pages",
-              "Advanced analytics",
-              "Priority support",
-              "Custom templates",
-              "A/B testing",
-            ],
-            cta: "Start Free Trial",
-            highlighted: true,
-          },
-          {
-            name: "Enterprise",
-            price: "$199",
-            period: "/month",
-            description: "For large organizations",
-            features: [
-              "Everything in Professional",
-              "Dedicated account manager",
-              "Custom integrations",
-              "SLA guarantee",
-              "Training & onboarding",
-            ],
-            cta: "Contact Sales",
-            highlighted: false,
-          },
+          { name: "Basic", price: "$9", period: "/mo", description: "For individuals", features: [], cta: "Start", highlighted: false },
+          { name: "Pro", price: "$29", period: "/mo", description: "For teams", features: [], cta: "Start", highlighted: true },
+          { name: "Enterprise", price: "$99", period: "/mo", description: "For organizations", features: [], cta: "Contact", highlighted: false },
         ],
       },
     },
@@ -246,30 +132,11 @@ export const siteContent: SiteContent = {
       enabled: true,
       id: "testimonials",
       props: {
-        title: "Loved by builders everywhere",
-        subtitle: "See what our customers have to say",
+        title: "What our customers say",
         testimonials: [
-          {
-            quote:
-              "This template saved us weeks of development time. The content-driven approach is genius.",
-            author: "Sarah Johnson",
-            role: "CEO, TechStart",
-            avatar: "/avatars/sarah.jpg",
-          },
-          {
-            quote:
-              "Finally, a landing page system that makes sense. Clean code and great documentation.",
-            author: "Michael Chen",
-            role: "Developer, BuildFast",
-            avatar: "/avatars/michael.jpg",
-          },
-          {
-            quote:
-              "We've built 5 landing pages with this template. Each one converts better than the last.",
-            author: "Emily Rodriguez",
-            role: "Marketing Director, GrowthCo",
-            avatar: "/avatars/emily.jpg",
-          },
+          { quote: "Quote from customer 1", author: "Name 1", role: "Role, Company" },
+          { quote: "Quote from customer 2", author: "Name 2", role: "Role, Company" },
+          { quote: "Quote from customer 3", author: "Name 3", role: "Role, Company" },
         ],
       },
     },
@@ -279,28 +146,10 @@ export const siteContent: SiteContent = {
       id: "faq",
       props: {
         title: "Frequently asked questions",
-        subtitle: "Everything you need to know",
         faqs: [
-          {
-            question: "How do I customize the content?",
-            answer:
-              "Simply edit the content/site.ts file. All copy, structure, and configuration lives there. No need to touch component code.",
-          },
-          {
-            question: "Can I add custom sections?",
-            answer:
-              "Yes! Create a new section component, add it to the registry, and reference it in your content file. The system is designed for extensibility.",
-          },
-          {
-            question: "Is this production-ready?",
-            answer:
-              "Absolutely. Built with Next.js, TypeScript, and Tailwind CSS. Includes proper SEO, performance optimizations, and responsive design.",
-          },
-          {
-            question: "What about styling and themes?",
-            answer:
-              "The template uses Tailwind CSS and shadcn/ui with CSS variables for theming. Easy to customize colors, fonts, and spacing.",
-          },
+          { question: "Question 1?", answer: "Answer to question 1." },
+          { question: "Question 2?", answer: "Answer to question 2." },
+          { question: "Question 3?", answer: "Answer to question 3." },
         ],
       },
     },
@@ -310,50 +159,19 @@ export const siteContent: SiteContent = {
       id: "finalCta",
       props: {
         title: "Ready to get started?",
-        subtitle:
-          "Join thousands of teams building better landing pages with our template",
-        ctaPrimary: "Start Building",
-        ctaSecondary: "View Documentation",
+        subtitle: "Join thousands of satisfied customers today",
+        ctaPrimary: "Get Started",
+        ctaSecondary: "Contact Sales",
       },
     },
     {
       key: "footer",
       enabled: true,
-      id: "footer",
       props: {
-        logo: "Landing Template Starter",
-        tagline: "Build high-converting landing pages with ease",
-        links: [
-          {
-            title: "Product",
-            items: [
-              { label: "Features", href: "#benefits" },
-              { label: "Pricing", href: "#pricing" },
-              { label: "FAQ", href: "#faq" },
-            ],
-          },
-          {
-            title: "Resources",
-            items: [
-              { label: "Documentation", href: "/docs" },
-              { label: "Blog", href: "/blog" },
-              { label: "Support", href: "/support" },
-            ],
-          },
-          {
-            title: "Company",
-            items: [
-              { label: "About", href: "/about" },
-              { label: "Contact", href: "/contact" },
-              { label: "Privacy", href: "/privacy" },
-            ],
-          },
-        ],
-        social: [
-          { platform: "Twitter", href: "https://twitter.com" },
-          { platform: "GitHub", href: "https://github.com" },
-          { platform: "LinkedIn", href: "https://linkedin.com" },
-        ],
+        logo: "Your Brand",
+        tagline: "Your tagline here",
+        links: [],
+        social: [],
       },
     },
   ],
