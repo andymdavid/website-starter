@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
-import Image from "next/image";
 
 interface HeroProps {
   badge?: string;
@@ -142,12 +141,10 @@ export function Hero({
             {media ? (
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border bg-muted/50 shadow-2xl">
                 {media.type === "image" && (
-                  <Image
+                  <img
                     src={media.src}
                     alt={media.alt}
-                    fill
-                    className="object-cover"
-                    priority
+                    className="h-full w-full object-cover"
                   />
                 )}
               </div>
