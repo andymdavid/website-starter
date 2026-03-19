@@ -10,7 +10,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu, X } from "lucide-react";
+import { MenuIcon } from "@/components/ui/icons";
 import { siteContent } from "@/content/site";
 
 interface NavbarProps {
@@ -67,7 +67,7 @@ export function Navbar({ links, cta }: NavbarProps) {
                 size="icon"
                 aria-label="Open mobile menu"
               >
-                <Menu className="h-5 w-5" />
+                <MenuIcon className="h-5 w-5" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">

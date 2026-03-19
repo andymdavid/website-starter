@@ -4,8 +4,8 @@ import { Section } from "@/components/layout/section";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { ArrowRightIcon, PlayIcon } from "@/components/ui/icons";
 import { motion } from "framer-motion";
-import { ArrowRight, Play } from "lucide-react";
 
 interface HeroProps {
   badge?: string;
@@ -107,12 +107,12 @@ export function Hero({
               <Button size="lg" asChild className="group">
                 <a href={primaryCta.href}>
                   {primaryCta.label}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild className="group">
                 <a href={secondaryCta.href}>
-                  <Play className="mr-2 h-4 w-4" />
+                  <PlayIcon className="mr-2 h-4 w-4" />
                   {secondaryCta.label}
                 </a>
               </Button>
@@ -154,7 +154,7 @@ export function Hero({
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center space-y-2 p-8">
                     <div className="w-16 h-16 mx-auto rounded-lg bg-primary/10 flex items-center justify-center">
-                      <Play className="h-8 w-8 text-primary" />
+                      <PlayIcon className="h-8 w-8 text-primary" />
                     </div>
                     <p className="text-sm text-muted-foreground">
                       Product Demo
